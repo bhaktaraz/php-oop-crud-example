@@ -58,6 +58,14 @@ if (isset($_POST["add"])) {
 
                 <div class="form-group">
                     <div class="row">
+                        <label>Author</label> <input type="text"
+                                                       name="author" id="author"
+                                                       class="form-control">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
                         <button class="btn btn-primary" name="add">Submit</button>
                     </div>
                 </div>

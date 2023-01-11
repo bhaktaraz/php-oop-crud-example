@@ -13,6 +13,7 @@ $(document).ready(function(){
 					$('#description').val(response.description);
 					$('#url').val(response.url);
 					$("#category").val(response.category);
+					$("#author").val(response.author);
 					$("#id").val(id);
 				}
 			});

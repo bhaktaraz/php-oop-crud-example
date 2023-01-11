@@ -13,7 +13,7 @@ class CrudController
             
             $conn = $dao->openConnection();
             
-            $sql = "SELECT id,title,description, url, category FROM `tb_links` ORDER BY id DESC";
+            $sql = "SELECT id,title,description, url, category, author FROM `tb_links` ORDER BY id DESC";
             
             $resource = $conn->query($sql);
             
@@ -38,7 +38,7 @@ class CrudController
             
             $conn = $dao->openConnection();
             
-            $sql = "SELECT id,title,description, url, category FROM `tb_links` WHERE id=" . $id . " ORDER BY id DESC";
+            $sql = "SELECT id,title,description, url, category, author FROM `tb_links` WHERE id=" . $id . " ORDER BY id DESC";
             
             $resource = $conn->query($sql);
             
@@ -61,12 +61,13 @@ class CrudController
         $description = $_POST['description'];
         $url = $_POST['url'];
         $category = $_POST['category'];
-        
+        $author = $_POST['author'];
+
         $dao = new Dao();
         
         $conn = $dao->openConnection();
         
-        $sql = "INSERT INTO `tb_links`(`title`, `description`, `url`, `category`) VALUES ('" . $title . "','" . $description . "','" . $url . "','" . $category . "')";
+        $sql = "INSERT INTO `tb_links`(`title`, `description`, `url`, `category`, `author`) VALUES ('" . $title . "','" . $description . "','" . $url . "','" . $category . "','" . $author . "')";
         $conn->query($sql);
         $dao->closeConnection();
     }
@@ -79,12 +80,13 @@ class CrudController
         $description = $_POST['description'];
         $url = $_POST['url'];
         $category = $_POST['category'];
-        
+        $author = $_POST['author'];
+
         $dao = new Dao();
         
         $conn = $dao->openConnection();
         
-        $sql = "UPDATE tb_links SET title = '" . $title . "' , description='" . $description . "', url='" . $url . "', category='" . $category . "' WHERE id=" . $id;
+        $sql = "UPDATE tb_links SET title = '" . $title . "' , description='" . $description . "', url='" . $url . "', category='" . $category . "', author='" . $author . "' WHERE id=" . $id;
         
         $conn->query($sql);
         $dao->closeConnection();

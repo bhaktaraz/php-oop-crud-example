@@ -8,6 +8,7 @@ if (! empty($result)) {
     </div>
     <div class="description"><?php echo $result[$k]["description"]; ?>...</div>
     <div class="category"><?php echo $result[$k]["category"]; ?></div>
+    <div class="author">Author : <?php echo $result[$k]["author"]; ?></div>
     <div class="action">
         <button class="btn-action bn-edit"
             id="<?php echo $result[$k]["id"]; ?>">Edit</button>

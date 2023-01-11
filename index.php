@@ -76,6 +76,15 @@ $result = $crudcontroller->readData();
 
                         <div class="form-group">
                             <div class="row">
+                                <label>Author</label> <input
+                                        type="text" name="author"
+                                        id="author"
+                                        class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
                                 <input type="text" name="id"
                                     id="id" class="form-control"
                                     hidden="true">

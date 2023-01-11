@@ -40,6 +40,16 @@ form {
     border-radius: 4px;
 }
 
+.author {
+    background-color: #000;
+    color: #fff;
+    display: inline;
+    float: left;
+    padding: 5px 20px;
+    border: #d4d4d4 1px solid;
+    border-radius: 4px;
+}
+
 .action .btn-action{
     background-color: #64afff;
     border: #5ea5f1 1px solid;

@@ -12,6 +12,7 @@
                     $responseArray["description"] = $result[0]["description"];
                     $responseArray["url"] = $result[0]["url"];
                     $responseArray["category"] = $result[0]["category"];
+                    $responseArray["author"] = $result[0]["author"];
                     echo json_encode($responseArray);
                 }
             }
